@@ -1,0 +1,19 @@
+{
+  "name": "playground",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "svelte": "^4.2.2"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.3.10",
+    "@rsbuild/plugin-svelte": "^0.3.10",
+    "rsbuild-plugin-svelte-inspector": "^0.0.1",
+    "typescript": "^5.3.0"
+  }
+}

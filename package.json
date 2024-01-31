@@ -1,0 +1,68 @@
+{
+  "name": "rsbuild-plugin-svelte-inspector",
+  "version": "0.0.1",
+  "description": "📦 📦 rsbuild plugin svelte inspector",
+  "scripts": {
+    "build": "tsup && cp -r ./src/client ./dist",
+    "dev": "tsup --watch src",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "play": "npm -C playground run dev",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp -r && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "src/client/load.js"
+  ],
+  "keywords": [
+    "rsbuild",
+    "plugin",
+    "print"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@rsbuild/core": "^0.3.10",
+    "@types/node": "^20.11.13",
+    "bumpp": "^9.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-relaxed-ts": "^2.0.34",
+    "esno": "^0.17.0",
+    "prettier": "^3.2.4",
+    "tsup": "^7.3.0",
+    "typescript": "^5.3.3",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=18",
+    "@rsbuild/core": ">=0.2.13"
+  },
+  "dependencies": {
+    "@nozomuikuta/h3-cors": "^0.2.2",
+    "@rsbuild/shared": "^0.0.17",
+    "h3": "^1.9.0",
+    "launch-editor-middleware": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/rsbuild-plugin-react-inspector"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/rsbuild-plugin-react-inspector/issues"
+  },
+  "homepage": "https://github.com/hunghg255/rsbuild-plugin-react-inspector#readme"
+}
