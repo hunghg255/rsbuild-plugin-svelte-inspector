@@ -19,7 +19,7 @@
 A rsbuild plugin which provides the ability that to jump to the local IDE when you click the element of browser automatically.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/hunghg255/rsbuild-plugin-svelte-inspector/main/assets/demo.mp4" alt="rsbuild-plugin-svelte-inspector">
+<img src="https://raw.githubusercontent.com/hunghg255/rsbuild-plugin-svelte-inspector/main/assets/demo.gif" alt="rsbuild-plugin-svelte-inspector">
 </p>
 
 ## 📦 Installation
