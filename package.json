@@ -59,10 +59,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hunghg255/rsbuild-plugin-react-inspector"
+    "url": "https://github.com/hunghg255/rsbuild-plugin-svelte-inspector"
   },
   "bugs": {
-    "url": "https://github.com/hunghg255/rsbuild-plugin-react-inspector/issues"
+    "url": "https://github.com/hunghg255/rsbuild-plugin-svelte-inspector/issues"
   },
-  "homepage": "https://github.com/hunghg255/rsbuild-plugin-react-inspector#readme"
+  "homepage": "https://github.com/hunghg255/rsbuild-plugin-svelte-inspector#readme"
 }

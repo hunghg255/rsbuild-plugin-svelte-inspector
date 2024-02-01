@@ -10,13 +10,13 @@ const color = {
 };
 
 const getStyles = (position) =>
-  `.react-inspector-container{height:20px;width:100px;cursor:pointer;position:fixed;text-align:center;z-index:2147483647;font-family:Arial,Helvetica,sans-serif;top:${position.top};left:${position.left};bottom:${position.bottom};right:${position.right}}.react-inspector-banner{display:none;position:absolute;margin:0;padding:5px;width:260px;border-radius:3px;font-weight:500;font-size:11px;color:#e9e9e9;background-color:#42b883;text-decoration:none;top:100%;right:0}.react-inspector-banner span{display:block;font-size:12px;color:#213547;font-weight:700}.react-inspector-container:hover .react-inspector-banner{display:block}.react-inspector-container--disabled:hover .react-inspector-banner{display:none}.react-inspector-overlay{z-index:2147483647;position:fixed;padding:5px 8px;border-radius:4px;text-align:left;color:#e9e9e9;background-color:#42b883;transform:translateX(-50%);left:50%;transition:all .1s ease-in;pointer-events:none;font-family:Arial,Helvetica,sans-serif;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1)}.react-inspector-overlay .react-inspector-tip{font-size:11px;opacity:.7}.react-inspector-size-indicator{z-index:2147483646;position:fixed;background-color:#42b88325;border:1px solid #42b88350;border-radius:5px;transition:all .1s ease-in;pointer-events:none}`;
+  `.svelte-inspector-container{height:20px;width:100px;cursor:pointer;position:fixed;text-align:center;z-index:2147483647;font-family:Arial,Helvetica,sans-serif;top:${position.top};left:${position.left};bottom:${position.bottom};right:${position.right}}.svelte-inspector-banner{display:none;position:absolute;margin:0;padding:5px;width:260px;border-radius:3px;font-weight:500;font-size:11px;color:#e9e9e9;background-color:#42b883;text-decoration:none;top:100%;right:0}.svelte-inspector-banner span{display:block;font-size:12px;color:#213547;font-weight:700}.svelte-inspector-container:hover .svelte-inspector-banner{display:block}.svelte-inspector-container--disabled:hover .svelte-inspector-banner{display:none}.svelte-inspector-overlay{z-index:2147483647;position:fixed;padding:5px 8px;border-radius:4px;text-align:left;color:#e9e9e9;background-color:#42b883;transform:translateX(-50%);left:50%;transition:all .1s ease-in;pointer-events:none;font-family:Arial,Helvetica,sans-serif;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1)}.svelte-inspector-overlay .svelte-inspector-tip{font-size:11px;opacity:.7}.svelte-inspector-size-indicator{z-index:2147483646;position:fixed;background-color:#42b88325;border:1px solid #42b88350;border-radius:5px;transition:all .1s ease-in;pointer-events:none}`;
 
-const HTML = `<div data-react-inspector-ignore="true">
+const HTML = `<div data-svelte-inspector-ignore="true">
 <div
-  class="react-inspector-container react-inspector-container--disabled"
+  class="svelte-inspector-container svelte-inspector-container--disabled"
 >
-  <svg width="100" height="19" viewBox="0 0 62 12" fill="${color.disabled}" class="react-inspector-icon"
+  <svg width="100" height="19" viewBox="0 0 62 12" fill="${color.disabled}" class="svelte-inspector-icon"
   >
     <path d="M0.988281 5.34375C0.988281 5.26562 1.00391 5.20312 1.03516 5.15625C1.07422 5.10156 1.14062 5.04688 1.23438 4.99219C1.64062 4.80469 2.00391 4.62891 2.32422 4.46484C2.65234 4.30078 2.97266 4.14453 3.28516 3.99609C3.59766 3.83984 3.92188 3.6875 4.25781 3.53906C4.60156 3.39062 5 3.23047 5.45312 3.05859C5.46094 3.05859 5.46875 3.05859 5.47656 3.05859C5.48438 3.05078 5.49609 3.04688 5.51172 3.04688C5.59766 3.04688 5.66797 3.08594 5.72266 3.16406C5.77734 3.24219 5.80469 3.32031 5.80469 3.39844C5.80469 3.48438 5.78516 3.55469 5.74609 3.60938C5.71484 3.66406 5.65234 3.71094 5.55859 3.75L2.55859 5.07422L2.71094 5.22656C2.71094 5.23438 2.75 5.25781 2.82812 5.29688C2.91406 5.32812 3.02344 5.375 3.15625 5.4375C3.28906 5.5 3.4375 5.57031 3.60156 5.64844C3.77344 5.71875 3.94141 5.79297 4.10547 5.87109C4.27734 5.94141 4.44141 6.01172 4.59766 6.08203C4.75391 6.14453 4.88672 6.20312 4.99609 6.25781C5.07422 6.29688 5.18359 6.32812 5.32422 6.35156C5.47266 6.36719 5.61328 6.39062 5.74609 6.42188C5.88672 6.45312 6.00781 6.5 6.10938 6.5625C6.21875 6.61719 6.27344 6.70703 6.27344 6.83203C6.27344 6.94141 6.23047 7.02734 6.14453 7.08984C6.06641 7.14453 5.97656 7.17188 5.875 7.17188C5.77344 7.17188 5.625 7.15234 5.42969 7.11328C5.24219 7.06641 5.02344 7.00781 4.77344 6.9375C4.53125 6.85938 4.26562 6.76953 3.97656 6.66797C3.69531 6.56641 3.41406 6.46484 3.13281 6.36328C2.85156 6.26172 2.58203 6.15625 2.32422 6.04688C2.06641 5.9375 1.83594 5.83984 1.63281 5.75391C1.4375 5.66016 1.28125 5.57812 1.16406 5.50781C1.04688 5.4375 0.988281 5.38281 0.988281 5.34375Z"  fill="curentColor"/>
     <path d="M7.60066 0.599999H7.70866C7.77266 0.599999 7.82866 0.624 7.87666 0.672C7.92466 0.72 7.94866 0.776 7.94866 0.84V8.76C7.94866 8.824 7.92466 8.88 7.87666 8.928C7.82866 8.976 7.77266 9 7.70866 9H7.60066C7.52866 9 7.46866 8.976 7.42066 8.928C7.38066 8.88 7.36066 8.824 7.36066 8.76V0.84C7.36066 0.776 7.38066 0.72 7.42066 0.672C7.46866 0.624 7.52866 0.599999 7.60066 0.599999ZM11.851 2.976C12.451 2.976 12.911 3.136 13.231 3.456C13.551 3.768 13.711 4.228 13.711 4.836V8.76C13.711 8.92 13.635 9 13.483 9H13.387C13.227 9 13.147 8.92 13.147 8.76V4.968C13.147 4.016 12.711 3.54 11.839 3.54C11.383 3.54 10.995 3.72 10.675 4.08C10.587 4.152 10.511 4.188 10.447 4.188C10.303 4.188 10.227 4.108 10.219 3.948C10.219 3.884 10.235 3.82 10.267 3.756C10.435 3.524 10.659 3.336 10.939 3.192C11.219 3.048 11.523 2.976 11.851 2.976ZM9.823 3.012H9.919C9.983 3.012 10.039 3.036 10.087 3.084C10.135 3.124 10.159 3.18 10.159 3.252V8.76C10.159 8.832 10.135 8.892 10.087 8.94C10.039 8.98 9.983 9 9.919 9H9.823C9.759 9 9.703 8.98 9.655 8.94C9.607 8.892 9.583 8.832 9.583 8.76V3.252C9.583 3.18 9.607 3.124 9.655 3.084C9.703 3.036 9.759 3.012 9.823 3.012ZM15.5172 4.572C15.5172 4.116 15.6692 3.736 15.9732 3.432C16.2852 3.128 16.7452 2.976 17.3532 2.976C17.9692 2.976 18.4412 3.128 18.7692 3.432C19.0972 3.728 19.2612 4.168 19.2612 4.752C19.2612 4.816 19.2372 4.872 19.1892 4.92C19.1492 4.96 19.0972 4.98 19.0332 4.98H18.9252C18.8612 4.98 18.8052 4.96 18.7572 4.92C18.7172 4.872 18.6972 4.82 18.6972 4.764C18.6972 3.956 18.2452 3.552 17.3412 3.552C16.9252 3.552 16.6092 3.652 16.3932 3.852C16.1852 4.052 16.0812 4.304 16.0812 4.608C16.0812 4.912 16.1812 5.156 16.3812 5.34C16.5892 5.516 16.9772 5.66 17.5452 5.772C18.1132 5.884 18.5572 6.06 18.8772 6.3C19.1972 6.54 19.3572 6.9 19.3572 7.38C19.3572 7.852 19.1812 8.248 18.8292 8.568C18.4852 8.88 18.0012 9.036 17.3772 9.036C16.7612 9.036 16.2612 8.88 15.8772 8.568C15.4932 8.248 15.3012 7.78 15.3012 7.164C15.3012 6.996 15.3812 6.912 15.5412 6.912H15.6372C15.7892 6.912 15.8652 6.992 15.8652 7.152C15.8652 8.024 16.3812 8.46 17.4132 8.46C17.8772 8.46 18.2212 8.356 18.4452 8.148C18.6772 7.932 18.7932 7.668 18.7932 7.356C18.7932 7.044 18.6732 6.82 18.4332 6.684C18.1932 6.54 17.7732 6.404 17.1732 6.276C16.5812 6.148 16.1572 5.944 15.9012 5.664C15.6452 5.384 15.5172 5.02 15.5172 4.572ZM20.7741 4.956C20.7741 4.332 20.9621 3.848 21.3381 3.504C21.7221 3.152 22.2181 2.976 22.8261 2.976C23.4421 2.976 23.9421 3.148 24.3261 3.492C24.7101 3.836 24.9021 4.324 24.9021 4.956V7.044C24.9021 7.66 24.7101 8.144 24.3261 8.496C23.9421 8.848 23.4421 9.024 22.8261 9.024C22.2181 9.024 21.7221 8.86 21.3381 8.532V11.772C21.3381 11.924 21.2621 12 21.1101 12H21.0021C20.8501 12 20.7741 11.924 20.7741 11.772V4.956ZM23.9061 3.912C23.6261 3.672 23.2701 3.552 22.8381 3.552C22.4061 3.552 22.0461 3.676 21.7581 3.924C21.4781 4.164 21.3381 4.512 21.3381 4.968V7.884C21.8261 8.26 22.3061 8.448 22.7781 8.448C23.2501 8.448 23.6261 8.324 23.9061 8.076C24.1941 7.828 24.3381 7.476 24.3381 7.02V4.968C24.3381 4.504 24.1941 4.152 23.9061 3.912ZM27.0353 4.956C27.0353 4.324 27.2273 3.836 27.6113 3.492C27.9953 3.148 28.4953 2.976 29.1113 2.976C29.7273 2.976 30.2233 3.152 30.5993 3.504C30.9753 3.848 31.1633 4.332 31.1633 4.956V5.676C31.1633 6.02 30.9993 6.192 30.6713 6.192H28.0793C28.0073 6.192 27.9473 6.168 27.8993 6.12C27.8593 6.072 27.8393 6.016 27.8393 5.952V5.856C27.8393 5.792 27.8593 5.736 27.8993 5.688C27.9473 5.64 28.0073 5.616 28.0793 5.616H30.5993V4.968C30.5993 4.512 30.4593 4.164 30.1793 3.924C29.8993 3.676 29.5433 3.552 29.1113 3.552C28.6793 3.552 28.3193 3.676 28.0313 3.924C27.7513 4.164 27.6113 4.512 27.6113 4.968V7.032C27.6113 7.488 27.7513 7.84 28.0313 8.088C28.3193 8.328 28.6753 8.448 29.0993 8.448C29.5313 8.448 29.8873 8.332 30.1673 8.1C30.4553 7.86 30.5993 7.52 30.5993 7.08C30.5993 7.016 30.6193 6.96 30.6593 6.912C30.7073 6.864 30.7633 6.84 30.8273 6.84H30.9233C30.9953 6.84 31.0513 6.864 31.0913 6.912C31.1393 6.96 31.1633 7.016 31.1633 7.08C31.1553 7.696 30.9633 8.176 30.5873 8.52C30.2113 8.856 29.7193 9.024 29.1113 9.024C28.5033 9.024 28.0033 8.852 27.6113 8.508C27.2273 8.156 27.0353 7.668 27.0353 7.044V4.956ZM32.9181 4.956C32.9181 4.324 33.1101 3.836 33.4941 3.492C33.8781 3.148 34.3781 2.976 34.9941 2.976C35.6101 2.976 36.1061 3.152 36.4821 3.504C36.8581 3.848 37.0461 4.332 37.0461 4.956C37.0461 5.108 36.9661 5.184 36.8061 5.184H36.7101C36.5581 5.184 36.4821 5.108 36.4821 4.956C36.4821 4.5 36.3421 4.152 36.0621 3.912C35.7821 3.672 35.4261 3.552 34.9941 3.552C34.5621 3.552 34.2021 3.676 33.9141 3.924C33.6341 4.164 33.4941 4.512 33.4941 4.968V7.032C33.4941 7.488 33.6341 7.84 33.9141 8.088C34.2021 8.328 34.5621 8.448 34.9941 8.448C35.4261 8.448 35.7781 8.332 36.0501 8.1C36.3301 7.86 36.4741 7.52 36.4821 7.08C36.4821 7.016 36.5021 6.96 36.5421 6.912C36.5901 6.864 36.6461 6.84 36.7101 6.84H36.8061C36.8781 6.84 36.9341 6.864 36.9741 6.912C37.0221 6.96 37.0461 7.016 37.0461 7.08C37.0301 7.688 36.8341 8.164 36.4581 8.508C36.0821 8.852 35.5901 9.024 34.9821 9.024C34.3821 9.024 33.8861 8.852 33.4941 8.508C33.1101 8.156 32.9181 7.668 32.9181 7.044V4.956ZM39.4927 0.24H39.5887C39.7407 0.24 39.8167 0.316 39.8167 0.468L39.7807 7.152C39.7887 7.56 39.9007 7.876 40.1167 8.1C40.3407 8.324 40.6327 8.436 40.9927 8.436H41.2927C41.3567 8.436 41.4087 8.46 41.4487 8.508C41.4967 8.556 41.5207 8.608 41.5207 8.664V8.76C41.5207 8.92 41.3407 9 40.9807 9C40.4527 9 40.0287 8.84 39.7087 8.52C39.3887 8.192 39.2247 7.74 39.2167 7.164L39.2527 0.468C39.2687 0.316 39.3487 0.24 39.4927 0.24ZM38.5687 3H38.8567C38.9287 3 38.9847 3.024 39.0247 3.072C39.0727 3.12 39.0967 3.176 39.0967 3.24V3.312C39.0967 3.376 39.0727 3.432 39.0247 3.48C38.9847 3.528 38.9287 3.552 38.8567 3.552H38.5687C38.4967 3.552 38.4367 3.528 38.3887 3.48C38.3487 3.432 38.3287 3.376 38.3287 3.312V3.24C38.3287 3.176 38.3487 3.12 38.3887 3.072C38.4367 3.024 38.4967 3 38.5687 3ZM40.1767 3H41.0647C41.1287 3 41.1807 3.024 41.2207 3.072C41.2687 3.12 41.2927 3.176 41.2927 3.24V3.312C41.2927 3.376 41.2687 3.432 41.2207 3.48C41.1807 3.528 41.1287 3.552 41.0647 3.552H40.1767C40.1127 3.552 40.0567 3.528 40.0087 3.48C39.9607 3.432 39.9367 3.376 39.9367 3.312V3.24C39.9367 3.176 39.9607 3.12 40.0087 3.072C40.0567 3.024 40.1127 3 40.1767 3ZM43.008 4.956C43.008 4.324 43.2 3.836 43.584 3.492C43.968 3.148 44.468 2.976 45.084 2.976C45.7 2.976 46.196 3.152 46.572 3.504C46.948 3.848 47.136 4.332 47.136 4.956V7.044C47.136 7.668 46.948 8.156 46.572 8.508C46.196 8.852 45.7 9.024 45.084 9.024C44.476 9.024 43.976 8.852 43.584 8.508C43.2 8.156 43.008 7.668 43.008 7.044V4.956ZM46.572 4.956C46.572 4.5 46.432 4.152 46.152 3.912C45.872 3.664 45.516 3.54 45.084 3.54C44.652 3.54 44.292 3.664 44.004 3.912C43.716 4.152 43.572 4.5 43.572 4.956V7.044C43.572 7.5 43.716 7.852 44.004 8.1C44.292 8.34 44.652 8.46 45.084 8.46C45.516 8.46 45.872 8.34 46.152 8.1C46.432 7.852 46.572 7.5 46.572 7.044V4.956ZM51.0948 2.976C51.2468 2.976 51.3228 3.056 51.3228 3.216V3.3C51.3228 3.364 51.2988 3.42 51.2508 3.468C51.2108 3.516 51.1588 3.54 51.0948 3.54C50.6388 3.54 50.2748 3.656 50.0028 3.888C49.7308 4.12 49.5948 4.476 49.5948 4.956V8.76C49.5948 8.832 49.5708 8.892 49.5228 8.94C49.4748 8.98 49.4188 9 49.3548 9H49.2708C49.2068 9 49.1508 8.98 49.1028 8.94C49.0548 8.892 49.0308 8.832 49.0308 8.76V4.956C49.0308 4.3 49.2148 3.808 49.5828 3.48C49.9508 3.144 50.4548 2.976 51.0948 2.976Z"  opacity="0.94" fill="curentColor"/>
@@ -31,34 +31,34 @@ const HTML = `<div data-react-inspector-ignore="true">
   </svg>
 
   <a
-    class="react-inspector-banner"
-    href="https://github.com/hunghg255/rsbuild-plugin-react-inspector"
+    class="svelte-inspector-banner"
+    href="https://github.com/hunghg255/rsbuild-plugin-svelte-inspector"
     target="_blank"
   >
-    <span>rsbuild-plugin-react-inspector</span>
+    <span>rsbuild-plugin-svelte-inspector</span>
     Click on a element › Open IDE › Link to File
   </a>
 </div>
 
 
 <ul
-  class="react-inspector-overlay"
+  class="svelte-inspector-overlay"
 >
-  <div class="react-inspector-content"></div>
-  <div class="react-inspector-tip">
+  <div class="svelte-inspector-content"></div>
+  <div class="svelte-inspector-tip">
     Click to go to the file
   </div>
 </ul>
 
 <div
-  class="react-inspector-size-indicator"
+  class="svelte-inspector-size-indicator"
 />
 </div>
 `;
 
 function createInspectorContainer() {
   if (document.getElementById(CONTAINER_ID) != null)
-    throw new Error('reactInspectorContainer element already exists');
+    throw new Error('svelteInspectorContainer element already exists');
 
   const el = document.createElement('div');
   el.setAttribute('id', CONTAINER_ID);
@@ -149,11 +149,11 @@ function load() {
 
   domContainer.insertAdjacentHTML('afterbegin', HTML);
 
-  const container = document.querySelector('.react-inspector-container');
-  const overlay = document.querySelector('.react-inspector-overlay');
-  const indicator = document.querySelector('.react-inspector-size-indicator');
-  const content = document.querySelector('.react-inspector-content');
-  const icon = document.querySelector('.react-inspector-icon');
+  const container = document.querySelector('.svelte-inspector-container');
+  const overlay = document.querySelector('.svelte-inspector-overlay');
+  const indicator = document.querySelector('.svelte-inspector-size-indicator');
+  const content = document.querySelector('.svelte-inspector-content');
+  const icon = document.querySelector('.svelte-inspector-icon');
 
   overlay.style.display = 'none';
   indicator.style.display = 'none';
@@ -281,7 +281,7 @@ function load() {
     if (!active) {
       active = true;
       icon.style.fill = color.active;
-      container.classList.remove('react-inspector-container--disabled');
+      container.classList.remove('svelte-inspector-container--disabled');
 
       document.body.addEventListener('mousemove', updateLinkParams);
       document.body.addEventListener('resize', closeOverlay, true);
@@ -289,7 +289,7 @@ function load() {
     } else {
       active = false;
       icon.style.fill = color.disabled;
-      container.classList.add('react-inspector-container--disabled');
+      container.classList.add('svelte-inspector-container--disabled');
 
       document.body.removeEventListener('mousemove', updateLinkParams);
       document.body.removeEventListener('resize', closeOverlay, true);

@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginSvelte } from '@rsbuild/plugin-svelte';
-import { pluginSvelteInspector } from 'rsbuild-plugin-svelte-inspector';
+import { pluginSvelteInspector } from '../src';
 
 export default defineConfig({
   plugins: [
